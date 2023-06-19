@@ -1,0 +1,94 @@
+#myDiv{
+    color:red;
+}
+
+.centered-text {
+    position: relative;
+  }
+  
+  .centered-text::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  
+  .centered-text > span {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+#calendar{
+  margin-top: 32px;
+}
+
+#row-with-info{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  flex-grow: 1;
+}
+
+#row-with-info:hover{
+  display: flex;
+  justify-content: space-between;
+  place-items: center;
+  flex-grow: 1;
+  background-color: #ADD8E6;
+}
+
+#oneCol{
+  width: 16.666667%;
+  display: flex;
+  flex-grow: 1;
+  height: 50px;
+  place-items: center;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#oneCol-text{
+  width: 16.666667%;
+  display: flex;
+  flex-grow: 1;
+  height: 50px;
+  place-items: center;
+  margin-right: auto;
+  margin-left: auto;
+  color: red;
+}
+
+#line{
+  color: #565656;
+  border-top: 1px;
+  margin-top: 32px;
+}
+
+#whole-table{
+  margin-top: 64px;
+}
+
+#cent-app-date-pick{
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  justify-content: space-between;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+
+#cent-app-inputs{
+  width: 20%;
+}
+
+#cent-app-day-text{
+  font-weight: 600;
+  font-size: 32px;
+  margin-bottom: 8px;
+}
+
+#cent-app-grow{
+  display: flex;
+  flex-grow: 1;
+  width: 20%;
+}

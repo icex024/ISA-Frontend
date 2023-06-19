@@ -1,0 +1,22 @@
+<sidebar></sidebar>
+<div class="main-content">
+<h1>Available appointments in center {{centerName}}</h1>
+<table class="regular">
+    <tr>
+        <th>
+            Start
+        </th>
+        <th>
+            Duration
+        </th>
+        <th></th>
+    </tr>
+      <tr *ngFor="let app of appointments">
+        <td>{{ app.start }}</td>
+        <td>{{ app.duration }}</td>
+        <td><button (click)="schedule(app)" class="regular-button">Schedule</button></td>
+      </tr>
+   
+  </table>
+</div>
+  

@@ -1,0 +1,90 @@
+<div class="reg-div">
+    <table>
+        <tr>
+            <td>First Name: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.name"/></td>
+            <td *ngIf="nameNull">Enter name</td>
+        </tr>
+        <tr>
+            <td>Last Name: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.surname"/></td>
+            <td *ngIf="surnameNull">Enter surname</td>
+        </tr>
+        <tr>
+            <td>Username: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.username"/></td>
+            <td *ngIf="surnameNull">Enter username</td>
+        </tr>
+        <tr>
+            <td>E-Mail: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.email"/></td>
+            <td *ngIf="mailAddressNull">Enter e-mail address:</td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input class="input-regular" type="password" matInput [(ngModel)]="registeredUser.password"/></td>
+            <td *ngIf="passwordNull">Enter password</td>
+        </tr>
+        <tr>
+            <td>Confirm Password: </td>
+            <td><input class="input-regular" type="password" matInput [(ngModel)]="registeredUser.confirmPassword"/></td>
+            <td *ngIf="passwordNull">Enter confirmation password</td>
+        </tr>
+        <tr>
+            <td>JMBG: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.jmbg"/></td>
+            <td *ngIf="jmbgNull">Write jmbg</td>
+        </tr>
+        <tr>
+            <td>Phone: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.phone"/></td>
+            <td *ngIf="surnameNull">Write phone</td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.address"/></td>
+            <td *ngIf="addressNull">Write address</td>
+        </tr>
+        <tr>
+            <td>City: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.city"/></td>
+            <td *ngIf="cityNull">Write city</td>
+        </tr>
+        <tr>
+            <td>State: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.state"/></td>
+            <td *ngIf="stateNull">Write state</td>
+        </tr>
+       
+            <td>Gender: </td>
+            <td><select class="input-regular" matNativeControl [(ngModel)]="registeredUser.gender">
+              <option>MALE</option>
+              <option>FEMALE</option>
+            </select></td>
+            <td *ngIf="genderNull">Choose gender</td>
+       
+        <!-- <tr>
+            <td>Gender:</td>
+            <td><input type="text" matInput [(ngModel)]="registeredUser.gender"/></td>
+            <td *ngIf="genderNull">Write ocuppation</td>
+        </tr> -->
+        <tr>
+            <td>Ocuppation:</td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.occupation"/></td>
+            <td *ngIf="ocuppationNull">Write ocuppation</td>
+        </tr>
+        <tr>
+            <td>Workplace: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="registeredUser.workplace"/></td>
+            <td *ngIf="workplaceNull">Write workplace</td>
+        </tr>
+        
+        <tr>
+            <td></td>
+            <td><button mat-stroked-button (click)="userRegistration()"   class="regular-butoon">
+              Submit
+            </button></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,108 @@
+<sidebar></sidebar>
+<div class="main-content" *ngIf="centerAdmin">
+    <h2>Update your personal info</h2>
+    <form [formGroup]="updateForm">
+      <table>
+        <tr>
+          <td>
+            <label>Name</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="name" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Phone number</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="surname" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Email</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="email" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Phone number</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="phone" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Address</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="address" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>City</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="city" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>State</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="state" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Occupation</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="occupation" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>School/Workplace</label>
+          </td>
+          <td>
+            <input type="text" class="input-regular" formControlName="workplace" />
+          </td>
+        </tr>
+      </table>
+  
+      <button (click)="updateInfo()" class="regular-button">Submit</button>
+    </form>
+  
+    <form [formGroup]="changePassForm" id="second-form">
+      <h2>Change your password</h2>
+      <table>
+        <tr>
+          <td>
+            <label>New password</label>
+          </td>
+          <td>
+            <input type="password" class="input-regular" formControlName="password" />
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label>Confirm new password</label>
+          </td>
+          <td>
+            <input type="password" class="input-regular" formControlName="passwordRepeated" />
+          </td>
+        </tr>
+      </table>
+  
+      {{ unmatchingPasswords }}
+      <br />
+      <button (click)="changePassword()" class="regular-button">Submit</button>
+    </form>
+  </div>

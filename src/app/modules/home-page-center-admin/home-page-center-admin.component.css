@@ -1,0 +1,29 @@
+.map{
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.location-info{
+  margin-top: 128px;
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50%;
+}
+.first-block{
+  width: 50%;
+}
+.second-block{
+  margin-top: 64px;
+  margin-left: 16px;
+  display: flex;
+  flex-direction: column;
+}
+.info-div{
+  margin-bottom: 16px;
+}
+.location-div{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}

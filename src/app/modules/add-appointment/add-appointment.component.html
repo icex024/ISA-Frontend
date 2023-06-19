@@ -1,0 +1,40 @@
+<sidebar></sidebar>
+<div class="main-content">
+  <h2>Create a new predefined appointment</h2>
+  <label>Start date and time:</label>
+  <input class="input-regular" type="datetime-local" [(ngModel)]="appointment.start" />
+  <label>Duration in minutes:</label>
+  <input class="input-regular" type="number" [(ngModel)]="appointment.duration" /><br>
+  
+
+  <label>Select required employees for this appointment:</label>
+  <table>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{ employee.fullName }}</td>
+        <td>
+          <button (click)="add(employee)" class="regular-button" *ngIf="!employee.added">Add</button>
+          <button (click)="remove(employee)" class="cancel-button" *ngIf="employee.added">Remove</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <p *ngIf="selectedNames.length!=0">Employees you have selected:</p>
+  <ul>
+    <li *ngFor="let name of selectedNames">{{name}}</li>
+  </ul>
+
+  <button class="regular-button" (click)="create()">
+    Create appointment
+  </button>
+</div>
+
+<!--
+  <label>Select required employees for this appointment:</label>
+  <div *ngFor="let employee of employees">
+    <span>{{employee.fullName}}</span>
+    <button (click)="add(employee)" class="regular-button" *ngIf="!employee.added">Add</button>
+    <button (click)="remove(employee)" class="cancel-button" *ngIf="employee.added">Remove</button>
+  </div>
+  <button class="regular-button" (click)="create()">Create</button>
+</div>-->

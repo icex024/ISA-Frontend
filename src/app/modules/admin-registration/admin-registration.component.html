@@ -1,0 +1,102 @@
+<sidebar></sidebar>
+<div class="main-content">
+    <table>
+        <div>
+            <td>Admin type:</td>
+            <td>
+            <select matNativeControl [(ngModel)]="adminRegistrationDto.role">
+                <option value="" selected disabled></option>
+                <option value="System admin">System admin</option>
+                <option value="Center admin">Center admin</option>
+            </select>
+            </td>
+            <td></td>
+        </div>
+        <tr>
+            <td>Username: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.username"/></td>
+            <td *ngIf="userNameNull">Write username</td>
+        </tr>
+        <tr>
+            <td>Name: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.name"/></td>
+            <td *ngIf="nameNull">Write name</td>
+        </tr>
+        <tr>
+            <td>Surname: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.surname"/></td>
+            <td *ngIf="surnameNull">Write surname</td>
+        </tr>
+        <tr>
+            <td>Mail: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.mailAddress"/></td>
+            <td *ngIf="mailAddressNull">Write name</td>
+        </tr>
+        <tr>
+            <td>Password: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.password"/></td>
+            <td *ngIf="passwordNull">Write password</td>
+        </tr>
+        <tr>
+            <td>JMBG: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.jmbg"/></td>
+            <td *ngIf="jmbgNull">Write jmbg</td>
+        </tr>
+        <tr>
+            <td>Phone: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.phone"/></td>
+            <td *ngIf="surnameNull">Write phone</td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.address"/></td>
+            <td *ngIf="addressNull">Write address</td>
+        </tr>
+        <tr>
+            <td>City: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.city"/></td>
+            <td *ngIf="cityNull">Write city</td>
+        </tr>
+        <tr>
+            <td>State: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.state"/></td>
+            <td *ngIf="stateNull">Write state</td>
+        </tr>
+       
+            <td>Gender: </td>
+            <td><select matNativeControl [(ngModel)]="adminRegistrationDto.gender">
+              <option>MALE</option>
+              <option>FEMALE</option>
+            </select></td>
+            <td *ngIf="genderNull">Choose gender</td>
+       
+        <!-- <tr>
+            <td>Gender:</td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.gender"/></td>
+            <td *ngIf="genderNull">Write ocuppation</td>
+        </tr> -->
+        <tr>
+            <td>Ocuppation:</td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.occupation"/></td>
+            <td *ngIf="ocuppationNull">Write ocuppation</td>
+        </tr>
+        <tr>
+            <td>Workplace: </td>
+            <td><input type="text" matInput [(ngModel)]="adminRegistrationDto.workplace"/></td>
+            <td *ngIf="workplaceNull">Write workplace</td>
+        </tr>
+        <tr>
+            <td>Center ID: </td>
+            <td *ngIf="adminRegistrationDto.role=='System admin';else elseBlock"><input disabled="" value="0" type="number" matInput [(ngModel)]="adminRegistrationDto.centerId"/></td>
+            <ng-template #elseBlock><input  type="number" matInput [(ngModel)]="adminRegistrationDto.centerId"/></ng-template>
+            <td *ngIf="centerIdNull">Write center ID</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button mat-stroked-button (click)="adminRegistration()">
+              Submit
+            </button></td>
+            <td></td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,31 @@
+<sidebar></sidebar>
+<div class="main-content">
+  <app-survey *ngIf="notHasSurvey"  (surveyFilled)="notHasSurvey=$event"
+  ></app-survey>
+  
+  
+  <div *ngIf="notHasSurvey==false">
+  <label>Date and time for appointment:</label><br>
+  <input class="input-regular" type="datetime-local" [(ngModel)]="appointment.dateTime" />
+  <button class="regular-button" (click)="GetCentersByDate(appointment.dateTime)">Submit</button>
+  </div>
+  
+  <table matSort (matSortChange)="sortData($event)" *ngIf="showCenters" class="regular" cellspacing="0" >
+      <tr>
+        <td>Name</td>
+        <td>Address</td>
+        <td>City</td>
+        <td>State</td>
+        <td mat-sort-header="rating" id="rating">Rating</td>
+        <td></td>
+      </tr>
+      <tr *ngFor="let center of sortedData" >
+        <td>{{center.name}}</td>
+        <td>{{center.address}}</td>
+        <td>{{center.city}}</td>
+        <td>{{center.state}}</td>
+        <td>{{center.rating}}</td>
+        <td><button class="regular-button" (click)="ChoseCenter(center.id)">Chose</button></td>
+      </tr>
+    </table>
+</div>

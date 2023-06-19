@@ -1,0 +1,23 @@
+<div>
+  <div id="search">
+    <search-and-filter-centers  (searchTextChanged)="onSearchAndFilterTextEntered($event.enteredSearchValue,$event.filterBy,$event.filterValue)"></search-and-filter-centers>
+  </div>
+  <table class="regular" cellspacing="0">
+    <tr>
+      <td>Name</td>
+      <td>Address</td>
+      <td>City</td>
+      <td>State</td>
+      <td>Rating</td>
+      <td *ngIf="userType=='ROLE_USER'"></td>
+    </tr>
+    <tr *ngFor="let center of centerListToShow" >
+      <td>{{center.name}}</td>
+      <td>{{center.address}}</td>
+      <td>{{center.city}}</td>
+      <td>{{center.state}}</td>
+      <td>{{center.rating}}</td>
+      <td *ngIf="userType=='ROLE_USER'"><button class="regular-button" (click)="seeCenterAppointments(center)">See appointments</button></td>
+    </tr>
+  </table>
+</div>

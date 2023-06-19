@@ -1,0 +1,43 @@
+<sidebar></sidebar>
+<div class="main-content">
+  <div class="myDiv">
+    <table >
+      <tr>
+        <td>Name</td>
+        <td><input matInput [(ngModel)]="registeredUser.name" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>Surname</td>
+        <td><input matInput [(ngModel)]="registeredUser.surname" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>Phone</td>
+        <td><input matInput [(ngModel)]="registeredUser.phone" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input matInput [(ngModel)]="registeredUser.address" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><input matInput [(ngModel)]="registeredUser.city" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>State</td>
+        <td><input matInput [(ngModel)]="registeredUser.state" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>Occupation</td>
+        <td><input matInput [(ngModel)]="registeredUser.occupation" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td>Workplace</td>
+        <td><input matInput [(ngModel)]="registeredUser.workplace" class="input-regular"></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td><button mat-stroked-button (click)="editUser()" class="regular-button">Change</button></td>
+      </tr>
+    </table>
+  </div>
+  </div>

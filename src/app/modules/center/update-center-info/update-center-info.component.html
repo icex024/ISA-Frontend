@@ -1,0 +1,25 @@
+<sidebar></sidebar>
+<div class="main-content" *ngIf="center">
+    <form [formGroup]="updateForm">
+        <label>Name</label>
+        <input type="text"  formControlName="name" /><br>
+        <label>Address</label>
+        <input type="text"  formControlName="address" /><br>
+        <label>City</label>
+        <input type="text"  formControlName="city" /><br>
+        <label>State</label>
+        <input type="text" formControlName="state" /><br>
+        <label>Description</label>
+        <input type="text"  formControlName="description" /><br>
+        <label>Rating</label>
+        <input type="text"  formControlName="rating" [disabled]="true"/><br>
+        <label>Work Start</label>
+        <input type="text"  formControlName="workStart" [disabled]="true"/><br>
+        <label>Work End</label>
+        <input type="text"  formControlName="workEnd" [disabled]="true"/><br>
+      
+        <button (click)="updateInfo()">
+            Submit
+        </button>
+    </form>
+</div>

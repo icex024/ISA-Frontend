@@ -1,0 +1,72 @@
+
+<table>
+  <tr>
+    <td>
+      <label for="bloodGroup">Blood group:</label>
+    </td>
+    <td>
+      <select class="input-regular" (change)="bloodGroupChange($event)">
+        <option value="A" selected>A</option>
+        <option value="B">B</option>
+        <option value="AB" >AB</option>
+        <option value="O">O</option>
+      </select>
+    </td>
+  </tr>
+    <tr>
+      <td>
+        <label for="bloodQuantity">Blood Quantity:</label>
+      </td>
+      <td>
+        <input class="input-regular" type="number" id="bloodQuantity" name="bloodQuantity" [(ngModel)]="report.bloodQuantity">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="punctureArm">Puncture Arm:</label>
+      </td>
+      <td>
+        <select class="input-regular" (change)="punctureArmChanged($event)">
+          <option value="LEFT" selected>Left</option>
+          <option value="RIGHT">Right</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="hemoglobin">Hemoglobin:</label>
+      </td>
+      <td>
+        <input class="input-regular" type="number" id="hemoglobin" name="hemoglobin" [(ngModel)]="report.hemoglobin">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="hematocrit">Hematocrit:</label>
+      </td>
+      <td>
+        <input class="input-regular" type="number" id="hematocrit" name="hematocrit" [(ngModel)]="report.hematocrit">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="start">Start:</label>
+      </td>
+      <td>
+        <input class="input-regular" type="datetime-local" id="start" name="start" [(ngModel)]="report.start">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <label for="end">End:</label>
+      </td>
+      <td>
+        <input class="input-regular" type="datetime-local" id="end" name="end" [(ngModel)]="report.end">
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <button class="regular-button" (click)="submitExaminationReport()">Submit report</button>
+      </td>
+    </tr>
+  </table>

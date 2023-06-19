@@ -1,0 +1,54 @@
+<sidebar></sidebar>
+<div class="main-content">
+    <div *ngFor="let dateObj of listOfDatesRegular" id="whole-table">
+        <div id="cent-app-day-text">Day {{dateObj.dayOfWeek}}, {{dateObj.dateString}}</div>
+            <div *ngFor="let appointment of listToShow" id="row-with-info">
+                <ng-container *ngIf="appointment.start == dateObj.dateString">
+                <div id="oneCol">
+                    {{appointment.centerName}}
+                </div>
+                <div id="oneCol">
+                    {{appointment.userName}}  {{appointment.userSurname}}
+                </div>
+                <div id="oneCol">
+                    {{appointment.start}}
+                </div>
+                <div id="oneCol">
+                    {{appointment.duration}}
+                </div>
+
+                <div>
+                    <button class="cancel-button" (click)="Cancel(appointment.id)">Cancel</button>
+                </div>
+
+            </ng-container>
+        </div>
+        <hr id="line"/>
+        <!-- <table id="calendar" class="regular" cellspacing="0">
+            <tr>
+            <td>Center </td>
+            <td>Patient </td>
+            <td>Appointment start</td> 
+            <td>Duration</td>
+            <td></td> 
+            </tr>
+            <tr *ngFor="let appointment of listToShow" >
+                <ng-container *ngIf="appointment.start == dateObj.dateString">
+                    <td>{{appointment.centerName}}</td>
+                    <td>{{appointment.userName}}  {{appointment.userSurname}}</td>
+                    <td>{{appointment.start}}</td>
+                    <td>{{appointment.duration}}</td>
+                    <div *ngIf="appointment.canDonate;else elseBlock" class="centered-text">
+                        <td><button class="regular-button" [routerLink]="['/examination-report',appointment.id]">Start</button></td>
+                        <td><button class="regular-button" (click)="GivePenalty(appointment.userUsername)">Penalty</button></td>
+                    </div>
+                    <ng-template #elseBlock id="myDiv" class="centered-text">
+                        <td>User cannot donate blood</td>               
+                    </ng-template>
+                </ng-container>
+            </tr>
+        </table> -->
+    </div>
+</div>
+
+

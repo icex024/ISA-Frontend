@@ -1,0 +1,5 @@
+h1 {
+    color: var(--theme);
+    margin-top: 60px;
+    margin-bottom: 40px;
+}

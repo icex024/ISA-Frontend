@@ -1,0 +1,49 @@
+<!-- <div style='margin-left:10%;margin-bottom:5%;margin-top:3%'>
+
+<app-search (searchTextChanged)="onSearchTextEntered($event)"></app-search>
+
+
+</div> -->
+<sidebar></sidebar>
+<div class="main-content">
+    <div style='margin-left:10%;margin-bottom:5%;margin-top:3%' >
+        <tr>
+            <td>
+                <input class="input-regular" [(ngModel)]="searchText">
+            </td>
+            <td><button class="regular-button" (click)="Search(searchText)">
+                        Search
+                </button>
+            </td>
+    
+        </tr>
+    </div>
+        
+    
+    <table cellspacing="0">
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Occupation</th>
+            <th>Workplace</th>
+            <th>Penalties</th>
+        </tr>
+        <tr *ngFor="let reg of registeredUsers">
+            <td>{{reg.id}}</td>
+            <td>{{reg.name}}</td>
+            <td>{{reg.surname}}</td>
+            <td>{{reg.phone}}</td>
+            <td>{{reg.address}}</td>
+            <td>{{reg.city}}</td>
+            <td>{{reg.state}}</td>
+            <td>{{reg.occupation}}</td>
+            <td>{{reg.workplace}}</td>
+            <td>{{reg.penalties}}</td>
+        </tr>
+    </table>
+</div>

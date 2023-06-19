@@ -1,0 +1,10 @@
+textarea {
+    width: 250px;
+    height: 200px;
+}
+
+th, td {
+    text-align: center;
+    padding: 8px;
+
+}

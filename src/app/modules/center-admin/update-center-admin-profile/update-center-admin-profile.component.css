@@ -1,0 +1,15 @@
+div.main-content {
+    margin: 35px 200px;
+}
+
+h2 {
+    color: var(--theme);
+}
+
+#second-form {
+    margin-top: 60px;
+}
+
+button {
+    margin-top: 20px;
+}

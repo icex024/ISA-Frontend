@@ -1,0 +1,22 @@
+<table>
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Complaint Text</th>
+        <th>Answer</th>
+        <th>Complaint Entity</th>
+        <th>Created At</th>
+        <th>Created By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let complaint of complaints">
+        <td>{{ complaint.type }}</td>
+        <td>{{ complaint.complaintText }}</td>
+        <td>{{ complaint.answer }}</td>
+        <td>{{ complaint.complaintEntity }}</td>
+        <td>{{ complaint.createdAt }}</td>
+        <td>{{ complaint.createdBy }}</td>
+      </tr>
+    </tbody>
+  </table>

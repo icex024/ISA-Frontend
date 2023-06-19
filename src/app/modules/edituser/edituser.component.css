@@ -1,0 +1,6 @@
+.myDiv{
+    display: flex;
+    place-content: center;
+    margin-top:10%;
+
+}

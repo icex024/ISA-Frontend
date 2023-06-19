@@ -1,0 +1,68 @@
+<sidebar></sidebar>
+<div class="main-content">
+    <table>
+        <tr>
+            <td>Name: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="centerRegistrationDto.name"/></td>
+            <td *ngIf="nameNull">Write name</td>
+        </tr>
+        <tr>
+            <td>Address: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="centerRegistrationDto.address"/></td>
+            <td *ngIf="addressNull">Write address</td>
+        </tr>
+        <tr>
+            <td>City: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="centerRegistrationDto.city"/></td>
+            <td *ngIf="cityNull">Write city</td>
+        </tr>
+        <tr>
+            <td>State: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="centerRegistrationDto.state"/></td>
+            <td *ngIf="stateNull">Write state</td>
+        </tr>
+        <tr>
+            <td>Description: </td>
+            <td><input class="input-regular" type="text" matInput [(ngModel)]="centerRegistrationDto.description"/></td>
+            <td *ngIf="descriptionNull">Write description</td>
+        </tr>
+        <tr>
+            <td>Rating: </td>
+            <td><select matNativeControl [(ngModel)]="centerRegistrationDto.rating">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select></td>
+            <td *ngIf="ratingNull">Choose rating</td>
+        </tr>
+        <tr>
+            <td>Working hours start:</td>
+            <td><input class="input-regular" type="number" matInput [(ngModel)]="centerRegistrationDto.workStart"/></td>
+            <td *ngIf="descriptionNull">Write when start</td>
+        </tr>
+        <tr>
+            <td>Working hours end: </td>
+            <td><input class="input-regular" type="number" matInput [(ngModel)]="centerRegistrationDto.workEnd"/></td>
+            <td *ngIf="descriptionNull">Specify the end of work time</td>
+        </tr>
+        <tr>
+            <td>Longitude: </td>
+            <td><input class="input-regular" type="number" step="0.0000001" matInput [(ngModel)]="centerRegistrationDto.longitude"/></td>
+            <td *ngIf="descriptionNull">Enter longitude</td>
+        </tr>
+        <tr>
+            <td>Latitude: </td>
+            <td><input class="input-regular" type="number" matInput [(ngModel)]="centerRegistrationDto.latitude"/></td>
+            <td *ngIf="descriptionNull">Enter latitude</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button class='regular-button'  (click)="centerRegisration()">
+              Submit
+            </button></td>
+            <td></td>
+          </tr>
+    </table>
+</div>

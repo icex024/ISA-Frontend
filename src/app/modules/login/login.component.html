@@ -1,0 +1,8 @@
+<div>
+    <label>Username: </label><br>
+    <input type="text" class="input-regular" matInput [(ngModel)]="credentials.username" ><br>
+    <label>Password: </label><br>
+    <input type="password" class="input-regular" matInput [(ngModel)]="credentials.password" ><br>
+    <p [style.visibility]="showWrongCredentialsMessage? 'visible' : 'hidden'" class="errorMessage">Wrong username or password</p>
+    <button class="regular-button" (click)="logIn()">Log In</button>   
+</div>

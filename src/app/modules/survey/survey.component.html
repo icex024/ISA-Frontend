@@ -1,0 +1,27 @@
+<sidebar></sidebar>
+<div class="main-content"><h1>Please fill this survey very conscientiously</h1>
+
+<input type="checkbox" [(ngModel)]="survey.moreThan50kg" value=true/><span>Do you have more than 50kg?</span>
+<br/>
+<br/>
+<input type="checkbox" [(ngModel)]="survey.hasFever" value=true/><span>Do you have any fever at the moment or in the past 7 days?</span>
+<br/>
+<br/>
+<input type="checkbox" [(ngModel)]="survey.hasBloodPressure" value=true/><span>Do you have problem with blood pressure?</span>
+<br/>
+<br/>
+<input type="checkbox" [(ngModel)]="survey.hasSkinIntervention" value=true/><span>Do you donate blood or you have some intervention on skin in the past 6 months(*like piercing or tatto)</span>
+<br/>
+<br/>
+<input type="checkbox" [(ngModel)]="survey.hasToothIntervention" value=true/><span>Have you had any dental interventions in the past 7 days?</span>
+<br/>
+<br/>
+<input type="checkbox" [(ngModel)]="survey.useAntibiotics" value=true/><span>Do you use antibiotics at the moment or you used them in the past 7 days? </span>
+<br/>
+<br/>
+<div id="myDiv">*Question for female donators</div>
+<input type="checkbox" [(ngModel)]="survey.hasPMS" value=true/><span>Do you have menstrual cycle at the moment? </span>
+<br/>
+<br/>
+<button class="regular-button" (click)="createSurvey()">Submit</button>
+</div>

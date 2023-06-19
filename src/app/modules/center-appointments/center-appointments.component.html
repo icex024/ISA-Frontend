@@ -1,0 +1,83 @@
+<sidebar></sidebar>
+<div class="main-content">
+    <div id="cent-app-date-pick">
+        <div id="cent-app-grow">Pick date:</div>
+        <input id="cent-app-inputs" type="date" [(ngModel)]="selectedTime" (change)="SetRange()"/>
+        <div id="cent-app-grow"></div>
+    </div>
+    <div id="cent-app-date-pick">
+        <div id="cent-app-grow">Pick filter:</div>
+        <select id="cent-app-inputs" [(ngModel)]="selectedRange" (change)="SetRange()">
+            <option value="" selected disabled></option>
+            <option value="week">
+                Week
+            </option>
+            <option value="month">
+                Month
+            </option>
+            <option value="year">
+                Year
+            </option>
+        </select>
+        <div id="cent-app-grow"></div>
+    </div>
+    <div id="cent-app-date-pick">
+        <div id="cent-app-grow">Search:</div>
+        <input id="cent-app-inputs" type="text" (input)="search($event)"/>
+        <div id="cent-app-grow"></div>
+    </div>
+    <div *ngFor="let dateObj of listOfDatesRegular" id="whole-table">
+        <div id="cent-app-day-text">Day {{dateObj.dayOfWeek}}, {{dateObj.dateString}}</div>
+        <div *ngFor="let appointment of listToShow" id="row-with-info">
+            <ng-container *ngIf="appointment.start == dateObj.dateString">
+            <div id="oneCol">
+                {{appointment.centerName}}
+            </div>
+            <div id="oneCol">
+                {{appointment.userName}}  {{appointment.userSurname}}
+            </div>
+            <div id="oneCol">
+                {{appointment.start}}
+            </div>
+            <div id="oneCol">
+                {{appointment.duration}}
+            </div>
+            <div id="oneCol" *ngIf="appointment.canDonate;else elseBlock" class="centered-text">              
+                <div><button class="regular-button" [routerLink]="['/examination-report',appointment.id,appointment.canDonate]">Start</button></div>
+                <div><button class="regular-button" (click)="GivePenalty(appointment.userUsername)">Penalty</button></div>
+            </div>
+            <ng-template #elseBlock  class="centered-text" >
+                <div id="oneCol-text">User cannot donate blood</div>               
+            </ng-template >
+  
+        </ng-container>
+        </div>
+        <hr id="line"/>
+        <!-- <table id="calendar" class="regular" cellspacing="0">
+            <tr>
+               <td>Center </td>
+               <td>Patient </td>
+               <td>Appointment start</td> 
+               <td>Duration</td>
+               <td></td> 
+            </tr>
+            <tr *ngFor="let appointment of listToShow" >
+                <ng-container *ngIf="appointment.start == dateObj.dateString">
+                    <td>{{appointment.centerName}}</td>
+                    <td>{{appointment.userName}}  {{appointment.userSurname}}</td>
+                    <td>{{appointment.start}}</td>
+                    <td>{{appointment.duration}}</td>
+                    <div *ngIf="appointment.canDonate;else elseBlock" class="centered-text">
+                        <td><button class="regular-button" [routerLink]="['/examination-report',appointment.id]">Start</button></td>
+                        <td><button class="regular-button" (click)="GivePenalty(appointment.userUsername)">Penalty</button></td>
+                    </div>
+                    <ng-template #elseBlock id="myDiv" class="centered-text">
+                        <td>User cannot donate blood</td>               
+                    </ng-template>
+                </ng-container>
+            </tr>
+        </table> -->
+    </div>
+    
+
+</div>

@@ -1,0 +1,29 @@
+<table>
+    <tr>
+      <td><label for="type">Type:</label></td>
+      <td><input class="input-regular"  [readOnly]="true" type="number" id="type" [(ngModel)]="complaint.type"></td>
+    </tr>
+    <tr>
+      <td><label for="complaintEntity">Complaint Entity:</label></td>
+      <td><input class="input-regular" [readOnly]="true" type="text" id="complaintEntity" [(ngModel)]="complaint.complaintEntity"></td>
+    </tr>
+    <tr>
+      <td><label for="createdAt">Created At:</label></td>
+      <td><input class="input-regular" [readOnly]="true" type="text" id="createdAt" [(ngModel)]="complaint.createdAt"></td>
+    </tr>
+    <tr>
+      <td><label for="createdBy">Created By:</label></td>
+      <td><input class="input-regular" [readOnly]="true" type="text" id="createdBy" [(ngModel)]="complaint.createdBy"></td>
+    </tr>
+
+    <tr>
+        <td><label for="complaintText">Complaint Text:</label></td>
+        <td><textarea class="input-regular"  [readOnly]="true" type="text" id="complaintText" [(ngModel)]="complaint.complaintText"></textarea></td>
+    </tr>
+  </table>
+
+  
+    <label for="complaintText">Your response:</label>
+    <textarea class="input-regular"  type="text" id="complaintText" [(ngModel)]="complaint.answer"></textarea>
+    <button class="regular-button" (click)="submitResponse()">Submit response</button>
+

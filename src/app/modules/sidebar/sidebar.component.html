@@ -1,0 +1,30 @@
+<div id="sidebar">
+  <p [style.visibility]="loggedIn? 'visible' : 'hidden'">
+      Welcome, {{username}}!
+  </p>
+  <div id="sidebar-options">
+      <div id="sidebar-option" *ngIf="loggedIn" (click)="changeRoute('/home')">Home</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_CENTER_ADMIN'" (click)="changeRoute('/registered-users')" >List of users</div>
+      <!-- <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_CENTER_ADMIN'" (click)="changeRoute('')" >Start appointment</div> -->
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_CENTER_ADMIN'" (click)="changeRoute('/all-appointment-by-center')">Calendar</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_CENTER_ADMIN'" (click)="changeRoute('/center-admin-profile')" >Your profile</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_CENTER_ADMIN'" (click)="changeRoute('/center-info')">Center information</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_CENTER_ADMIN'" (click)="changeRoute('/create-appointment')">Create an appointment</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('show-centers')" >View centers</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('user-history')">Visit history</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('user-appointments')">Your appointments</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('create-appointment-by-user')">Create appointment</div> 
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('survey')">Sign list(for blood)</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('create-complaint')">Create a complaint</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_USER'" (click)="changeRoute('editRegisteredUser')">Profile</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_SYSTEM_ADMIN'" (click)="changeRoute('/add-center')" >Add center</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_SYSTEM_ADMIN'" (click)="changeRoute('admin-complaints')" >Your complaints</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_SYSTEM_ADMIN'" (click)="changeRoute('unanswered-complaints')" >Unanswered complaints</div>
+      <div id="sidebar-option" *ngIf="loggedIn && userRole == 'ROLE_SYSTEM_ADMIN'" (click)="changeRoute('/add-admin')" >Add admin</div>
+  </div>
+
+  <p [style.visibility]="loggedIn? 'hidden' : 'visible'" id="create-account">Don't have an account?<br><span (click)="goToRegistration()" id="create-account-span"><u>Create one here!</u></span></p>
+  <button  class="regular-button" (click)="logOut()" id="logout" class="regularButton" [style.visibility]="loggedIn? 'visible' : 'hidden'">
+      Log Out
+  </button>
+</div>

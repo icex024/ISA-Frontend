@@ -1,0 +1,24 @@
+<table class="regular">    
+      <tr>
+        <th>Type</th>
+        <th>Complaint Entity</th>
+        <th></th>
+      </tr>
+   
+      <tr *ngFor="let complaintEntity of complaintEntities">
+        <td>{{ complaintEntity.type}}</td>
+        <td>{{ complaintEntity.complaintEntityName }}</td>
+        <td>
+          <button class="regular-button" (click)="selectEntity(complaintEntity)">Make Complaint</button>
+        </td>
+      </tr> 
+</table>
+  
+
+<div *ngIf="entitySelected">
+    <label>Your complaint about {{selectedEntityName}}:</label><br>
+    <textarea class="input-regular" (change)="assignComplaintText($event.target)"></textarea><br>
+    <button (click)="create()" class="regular-button">Submit complaint</button>
+</div>
+
+

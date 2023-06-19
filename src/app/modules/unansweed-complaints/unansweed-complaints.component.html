@@ -1,0 +1,26 @@
+<sidebar></sidebar>
+<div class="main-content">
+<h1>Unresolved user complaints</h1>
+
+<table class="regular">
+      <tr>
+        <th>Type</th>
+        <th>Complaint Text</th>
+        <th>Complaint Entity</th>
+        <th>Created At</th>
+        <th>Created By</th>
+        <th></th>
+      </tr>
+    
+   
+      <tr *ngFor="let complaint of complaints">
+        <td>{{ complaint.type }}</td>
+        <td>{{ complaint.complaintText }}</td>
+        <td>{{ complaint.complaintEntity }}</td>
+        <td>{{ complaint.createdAt }}</td>
+        <td>{{ complaint.createdBy }}</td>
+        <td><button class="regular-button" (click)="resolveComplaint(complaint.id)">Resolve</button></td>
+      </tr>
+    
+  </table>
+  </div>

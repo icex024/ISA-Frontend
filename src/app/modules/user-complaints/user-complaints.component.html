@@ -1,0 +1,24 @@
+<table class="regular">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Complaint Text</th>
+        <th>Answer</th>
+        <th>Complaint Entity</th>
+        <th>Resolved</th>
+        <th>Created At</th>
+        <th>Resolved By</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let complaint of complaints">
+        <td>{{ complaint.type }}</td>
+        <td>{{ complaint.complaintText }}</td>
+        <td>{{ complaint.answer ? complaint.answer : 'Unresolved' }}</td>
+        <td>{{ complaint.complaintEntity }}</td>
+        <td>{{ complaint.resolved ? 'Resolved' : 'Unresolved' }}</td>
+        <td>{{ complaint.createdAt }}</td>
+        <td>{{ complaint.resolvedBy ? complaint.resolvedBy : 'Unresolved' }}</td>
+      </tr>
+    </tbody>
+</table>

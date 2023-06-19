@@ -1,0 +1,21 @@
+<div>
+  <div class = "search-and-filter-container">
+    <div id="search">
+      <input type="text" placeholder="Search..." class="input-regular" [(ngModel)] = "enteredSearchValue" (input)="onSearchAndFilterTextChanged()">
+    </div>
+    <select  class="input-regular" name="type" id="type" (change)="onSearchAndFilterTextChanged1($event)">
+      <option value="" disabled selected></option>
+      <option value="Rating">Rating</option>
+    </select>
+    <select class="input-regular" name="filter" id="filter"  (change)="onSearchAndFilterTextChanged2($event)">
+      <option disabled selected value=""></option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+      <option value="10">10</option>
+
+    </select>
+  </div>
+</div>

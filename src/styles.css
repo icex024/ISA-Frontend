@@ -1,0 +1,106 @@
+:root {
+  --theme: #5184D8;
+}
+
+
+* {
+  font-family: "Arial", monospace;
+}
+
+.input-regular {
+  height: 25px;
+  border-radius: 4px;
+  border: 2px solid #D5DBDB;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.input-regular:focus {
+  border-color: var(--theme);
+}
+
+.regular-button {
+  padding: 8px 18px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  color: var(--theme);
+  background-color: white;
+  box-shadow: none;
+  border: 2px solid var(--theme);
+}
+
+.regular-button:hover{
+  cursor: pointer;
+  color:white;
+  background-color: var(--theme);
+}
+
+.cancel-button {
+  padding: 8px 18px;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+  color: white;
+  background-color: red;
+  box-shadow: none;
+  border: 2px solid red;
+}
+
+.cancel-button:hover{
+  cursor: pointer;
+  color:red;
+  background-color: white;
+}
+
+
+table.regular {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+}
+
+table.regular tr:first-child {
+  background-color: var(--theme);
+  color: white;
+}
+
+table.regular td, th {
+  text-align: center;
+  font-weight: 200;
+  padding: 0 6px;
+}
+
+table.regular tr {
+  height: 60px;
+  background-color: #ccddff;
+  transition: .2s ease;
+}
+
+table.regular tr:not(:first-child):hover {
+  background-color: #b3ccff;
+  cursor: pointer;
+}
+
+.errorMessage {
+  color:red;
+}
+
+.main-content {
+  position: absolute;
+  top: 0;
+  left: 21%;
+  height: 100%;
+  width: 76%; 
+  padding-left: 2%;
+}
+
+.test-page {
+  display: flex;
+  flex-grow: 1;
+}
+
+.map-container {
+  position: relative;
+  top: 50%;
+  width: 50%;
+  height: 50%;
+}

@@ -1,0 +1,12 @@
+td:has(input), td:has(select) {
+    padding-left: 50px;
+}
+
+input {
+    width: 200px
+}
+
+button {
+    float: right;
+    margin-top: 20px;
+}
